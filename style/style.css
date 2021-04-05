@@ -1,0 +1,404 @@
+/********************* Global Code ****************/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+:root{
+    --main-color:#D75D0E ;
+    --sec-color : #87A74D;
+    --main-bg   : #000;
+    font-size: 10px;
+    font-family: Helvetica, sans-serif;
+} 
+span , a , img {
+    display: inline-block;
+} 
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}   
+.container{
+    width:85% ;
+    margin: 0 auto;
+}            
+ul {
+    list-style: none;
+}    
+button:focus,
+input:focus,
+textarea:focus{
+    outline: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+} 
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+p{
+    color: grey;
+    font-size: 1.5rem;
+}
+h2{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1em 0;
+}
+section{
+    padding: 5rem 0;
+}
+a.active{
+    color: var(--main-color);
+}
+.line{
+    position: relative; 
+  }
+.line::after{
+    content: "";
+    display: inline-block;
+    background-color: #fff;
+    width: 40px;
+    height: 3px;
+    position: absolute;
+    top: 3.8rem;
+    left: 8px;
+}
+.btn{
+    text-align: center;
+    background-color: #fff;
+    width: 10rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 1rem ;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+}
+.heading{
+    font-size: 3rem;
+    font-weight: lighter;
+}
+/********************* Global Code ****************/
+/********************* Nav ****************/
+.navbar{
+    background-color: rgba(135, 167, 77,.8);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    padding: 3em 0 2em;
+    z-index: 11;
+}
+.navbar__log{
+    width: 250px;
+}
+.navbar .d-flex{
+    flex-wrap: nowrap;
+}
+.navbar__list{
+    width: 70%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .5em;
+}
+.navbar a{
+    padding: 0 1rem;
+}
+.navbar::after{
+    content: "";
+    width: 100%;
+    display: inline-block;
+    background-color: #fff;
+    height: 2px;
+    opacity: .2;
+}
+/********************* /Nav ****************/
+
+/********************* header ****************/
+.header{
+    background-image: linear-gradient(to top,rgba(0,0,0,1),rgba(255, 255, 255, 0.061)),
+    url('../assets/Image/home-bg.jpg'); 
+    background-size: cover;
+    height: 1200px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    padding-bottom: 9rem;
+}
+
+.header p{
+    color: #fff;
+}
+.header__img{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10rem;
+}
+.header__text{
+    margin-bottom: 10rem;
+}
+.header__text__card{
+    width: 32%;
+}
+.header__text__card__img img{
+    border: 4px #fff solid;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+/********************* /header ****************/
+
+/********************* About ****************/
+.about{
+    background-color: #eee;
+    text-align: center;
+}
+.about p{
+    color: black;
+    text-align: left;
+}
+.about a{
+    color: var(--sec-color);
+}
+.about__header{
+    margin-bottom: 5rem;
+}
+.about__articles__card{
+    width: 31%;
+}
+.about__card__img{
+    position: relative;
+    align-items: center;
+}
+.about__card__img img{
+    display: block;
+}
+.about__card__img .overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.about__card__text{
+    width: 80%;
+    margin: 0 auto;
+}
+.about__articles__card a.btn{
+    margin-top: 2.5rem;
+    width: 12rem;
+}
+/********************* /About ****************/
+
+/********************* newsletter ****************/
+.newsletter{
+    color: #fff;
+    background-image: linear-gradient(to top,rgba(0,0,0,1),rgba(255, 255, 255, 0.061)) 
+    ,url('../assets/Image/newsletter-back.jpg'); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: center;
+}
+.newsletter p{
+    color: #fff;
+}
+.newsletter .d-flex{
+    justify-content: center;
+}
+
+.newsletter__header{
+    padding-bottom: 6rem;
+}
+.newsletter__form{
+    position: relative;
+    width: 70%;
+    margin: auto;
+}
+.newsletter__form input{
+    width:40% ;
+    padding: 1.5rem 1rem;
+    border: .5px solid #fff;
+    background-color: rgba(255,255,255,.5);
+}
+.newsletter__form a.btn{
+    position: absolute;
+    right: 18rem;
+    top: 0;
+    width: 12rem;
+    padding: 1.7rem 1rem;
+    z-index: 2;
+}
+/********************* /newsletter ****************/
+
+/********************* newiHorica ****************/
+.newiHorica__text{
+    width: 48%;
+}
+.newiHorica h2{
+    font-weight: 700;
+}
+.newiHorica__text a.btn{
+    background-color: var(--main-color);
+    margin-top: 5rem;
+    width: 12rem;
+}
+.newiHorica__text p{
+    padding: 1rem 0;
+}
+.newiHorica .d-flex{
+    align-items: center;
+}
+.newiHorica__img{
+    width: 35%;
+    text-align: center;
+}
+.newiHorica__img img{
+    border: 4px var(--main-color) solid;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    /* margin-left: 6rem; */
+}
+.sec_newiHorica{
+    padding-top: 5rem;
+}
+.sec_newiHorica a.btn{
+    background-color: var(--sec-color);
+}
+.sec_newiHorica .newiHorica__img{
+    text-align: left;
+}
+.sec_newiHorica .newiHorica__img img{
+    border: 4px var(--sec-color) solid;
+    
+   
+}
+/********************* /newiHorica ****************/
+
+/********************* Brands ****************/
+.brands{
+    background-color: #eee;
+    text-align: center;
+}
+.brands .heading{
+    font-weight: 600;
+    padding-bottom: 6rem;
+}
+.brands__imgs__prod img{
+    width: 100%;
+    object-fit: contain;
+}
+.brands .d-flex{
+    flex-wrap: nowrap;
+}
+/********************* /Brands ****************/
+
+/********************* follow ****************/
+.follow{
+    background-color: var(--main-color);
+}
+.follow h3{
+    color: #fff;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.follow .d-flex{
+    justify-content: center;
+    align-items: center;
+}
+.follow li i{
+    font-size: 2rem;
+    margin-right:4rem ;
+}
+/********************* /follow ****************/
+
+/********************* footer ****************/
+.footer{
+    color: #fff;
+    background-image: linear-gradient(to top,rgba(0,0,0,1),rgba(255, 255, 255, 0.061)) 
+    ,url('../assets/Image/img/footerBack.jpg'); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: center;
+    padding: 5rem 0;
+}
+.footer .heading{
+    text-align: left;
+    padding-left: 1rem;
+}
+.footer p{
+    color: var(--sec-color);
+}
+.footer__contact_img{
+    width: 300px;
+    position: relative;
+}
+.footer__contact__text{
+    position: absolute;
+    top: 12%;
+    left: 10%;
+}
+.footer li{
+    padding: .2rem 0;
+}
+.footer__imgs{
+    width: 60%;
+    padding-top: 10rem;
+}
+.footer__imgs__first_logo img,
+.footer__imgs__sec_logo img{
+    width: 250px;
+    object-fit: contain;
+    margin: 0 2rem;
+}
+.footer__imgs__sec_logo h2{ 
+    font-size: 2rem;
+    text-align: left;
+    margin-top: -.2rem;
+    margin-left: 1.5rem;
+}
+.footer .container .d-flex{
+    justify-content: center;
+    align-items: center;
+}
+.footer__imgs__first_logo{
+    position: relative;
+}
+.footer__imgs__first_logo::after{
+    content: "";
+    display: inline-block;
+    background-color: gray;
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    right: .5rem;
+}
+/********************* /footer ****************/
+
